@@ -3,10 +3,10 @@
 {
   "mcpServers": {
     "weather": {
-      "command": "/Users/gimjinsig/.local/bin/uv",
+      "command": "uv(should replace by path`which uv`",
       "args": [
         "--directory",
-        "/Users/gimjinsig/Desktop/mcp_server_study/weather",
+        "path of file to run",
         "run",
         "weather.py"
       ]
