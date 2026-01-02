@@ -4,7 +4,7 @@ import httpx
 from mcp.server.fastmcp import FastMCP
 
 # Initialize FastMCP server
-mcp = FastMCP("weather")
+mcp = FastMCP("weather", host="0.0.0.0", port=8000)
 
 # Constants
 NWS_API_BASE = "https://api.weather.gov"
@@ -94,7 +94,7 @@ Forecast: {period["detailedForecast"]}
 # Running the server
 def main():
     # Initialize and run the server
-    mcp.run(transport="stdio")
+    mcp.run(transport="sse")
 
 
 if __name__ == "__main__":
